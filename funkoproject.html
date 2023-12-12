@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funko Pops</title>
+    <style>
+      body {
+        background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+      }
+
+      h1 {
+        text-align: center;
+        font-family: monospace;
+        font-weight: lighter;
+        font-size: 40px;
+        color: #2a2438;
+      }
+      h2 {
+        color: #352f44;
+        font-family: monospace;
+        text-align: center;
+        font-size: 25px;
+      }
+      div {
+        color: #5c5470;
+        font-family: helvetica;
+        font-size: 15px;
+        text-align: center;
+        line-height: 30px;
+      }
+      span {
+        opacity: 0.9;
+      }
+      p {
+        opacity: 0.9;
+        line-height: 30px;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        border-radius: 20px;
+        max-width: 100%;
+      }
+      a {
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      button {
+        padding: 20px 40px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 20px;
+        border-radius: 10px;
+        border: 2px solid #352f44;
+        background: #dbd8e3;
+        transition: all 200ms ease-in-out;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+      }
+      button:hover {
+        cursor: pointer;
+        color: #dbd8e3;
+        background: #352f44;
+      }
+      .credit {
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>The Art of Funko Pop!</h1>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/100/321/original/funko2.jpg?1697208034"
+        alt="Funko at NYCC"
+        width="650"
+      />
+      <h2>The Magic of Pops</h2>
+
+      <div class="question">
+        <strong><em>What is Funko?</em></strong>
+        <span class="info">
+          Comparable to figurines, Funko Pop vinyl figures are based on icons,
+          popular culture, comic books, video games, and movies.
+          <br />
+
+          These toys with nostalgic themes come with gigantic heads and eyes,
+          portraying well-known licensed characters from many franchises in a
+          variety of sizes, clothing, stances, and finishes.
+          <br />
+
+          In addition, Funko Pop merchandise is packaged in a stylish display
+          box, which makes it the perfect collection for fans of pop culture
+          enthusiasts, from movies to icons. Therefore, Funko's Pop range
+          provides something for everyone, regardless of their interests!
+        </span>
+        <hr />
+      </div>
+      <h2>Value of Collections</h2>
+      <p>
+        Collecting Funko Pops can generate value over time which is why it is a
+        very popular hobby. Funkos when they first vocme out can range from $13
+        to $70 and can possible stay at that value, however with time, demand,
+        and rarity; the value can jump. The rarest Pop can be valued around
+        $10k! There are some that reach over $100k, however you don't see them
+        as often. Nonetheless, Pops' worth fluctuates from time to time, thus
+        collecting the rarest design has a higher chance of appreciating in
+        value over time.
+      </p>
+      <a
+        class="myCollection"
+        href="https://www.hobbydb.com/marketplaces/hobbydb/users/jocelyn-lugo"
+        target="_blank"
+        >View My Collection!</a
+      >
+      <hr />
+      <button>Buy Funko!</button>
+      <br />
+      <p class="credit">Page built by Jocelyn Lugo</p>
+    </div>
+    <script>
+      function likesFunkos() {
+        let hobby = prompt("Is collecting Funkos one of your hobbies?");
+        hobby = hobby.toLowerCase();
+        hobby = hobby.trim();
+        hobby = hobby.replace("yea", "yes");
+
+        if (hobby === "yes") {
+          alert("Visit Funko.com");
+        } else {
+          let h1 = document.querySelector("h1");
+          h1.innerHTML = "That's okay, thankyou for reading 😁";
+        }
+      }
+      let funkoButton = document.querySelector("button");
+
+      funkoButton.addEventListener("click", likesFunkos);
+    </script>
+  </body>
+</html>
